@@ -1,7 +1,5 @@
 import os
 import argparse
-import sys
-
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Steg Shotgun")
@@ -40,15 +38,25 @@ def universalTools(filename):
     binwalkCommand = "binwalk -e " + filename
     os.system(binwalkCommand)
 
-    print("[*] Running exiftool, putting output into exifdata.txt")
-    exiftoolCommand = "exiftool " + filename + " > exifdata.txt"
+    print("[*] Running exiftool")
+    exiftoolCommand = "exiftool " + filename
     os.system(exiftoolCommand)
 
     print("[*] Running strings, putting output into ImageStrings.txt")
     stringsCommand = "strings " + filename + " > ImageStrings.txt"
     os.system(stringsCommand)
 
+    print("[*] Running foremost")
+    foremostCommand = "foremost -i " + filename
+    os.system(foremostCommand)
 
+    print("[*] Running steghide info")
+    steghideInfoCommand = "steghide info " + filename
+    os.system(steghideInfoCommand)
+
+    print("[*] Running steghide extract")
+    steghideInfoCommand = "steghide extract -sf  " + filename
+    os.system(steghideInfoCommand)
 
 def pngTools(filename):
     print("PNG detected, running PNG tools")

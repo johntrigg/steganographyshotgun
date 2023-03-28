@@ -12,7 +12,10 @@ On PNG files? Zsteg
 On JPG? Stegseek
 
 # What tools do you still need to add?
-More research needed.
+More research needed. I'd like to add several modes of zsteg (checking for both MSB and LSB data). 
+https://github.com/Pulho/sigBits
+
+Maybe add support for audio files (WAVsteg, Sonic Visualizer), since those can be tricky, but not a lot can be done.
 
 # What still needs to be done?
 Better readme, as well as an installation guide for all of the tools, since it cannot reasonably be expected that the user has all of these tools done.
