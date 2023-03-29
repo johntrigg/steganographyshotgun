@@ -6,6 +6,9 @@ You feed it a file, and the filetype, and it'll run relevant tools on it. For ex
 The command to run it looks like this: ```python3 stegshotgun.py --filename atbash.jpg --filetype png```
 You need to have all of the tools installed.
 
+# How can I easily install all of the referenced tools?
+Run sudo on the install.sh script, like so: ```sudo install.sh```
+
 # What tools does it run?
 On everything? Strings, exiftool, binwalk
 
